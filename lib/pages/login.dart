@@ -1,3 +1,4 @@
+import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/starting.dart';
 import 'package:flutter/material.dart';
 import './../style/design_system.dart';
@@ -64,7 +65,12 @@ class Login extends StatelessWidget {
       return SizedBox(
         height: 52,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            if (condition == 'baca') {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Home('username')));
+            }
+          },
           child: Text(
             'Masuk',
             style: label,
