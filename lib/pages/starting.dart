@@ -1,7 +1,6 @@
 import 'package:ark_app/pages/login.dart';
 import 'package:flutter/material.dart';
-
-import './../style/design_system.dart';
+import 'package:ark_app/style/design_system.dart';
 
 class StartingUp extends StatelessWidget {
   @override

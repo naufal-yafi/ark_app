@@ -1,8 +1,9 @@
 import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/signup.dart';
 import 'package:ark_app/pages/starting.dart';
+import 'package:ark_app/pages/write.dart';
 import 'package:flutter/material.dart';
-import './../style/design_system.dart';
+import 'package:ark_app/style/design_system.dart';
 
 class Login extends StatelessWidget {
   String condition = '';
@@ -70,6 +71,9 @@ class Login extends StatelessWidget {
             if (condition == 'baca') {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => HomePage()));
+            } else {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => WritePage()));
             }
           },
           child: Text(

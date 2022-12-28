@@ -1,7 +1,8 @@
 import 'package:ark_app/pages/account.dart';
 import 'package:ark_app/pages/write.dart';
+import 'package:ark_app/pages/read.dart';
 import 'package:flutter/material.dart';
-import './../style/design_system.dart';
+import 'package:ark_app/style/design_system.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -18,11 +19,11 @@ class _HomePageState extends State<HomePage> {
         String date) {
       return InkWell(
         onTap: () {
-          // Navigator.push(
-          //     context,
-          //     MaterialPageRoute(
-          //         builder: ((context) =>
-          //             ReadingPage(title, date, category, linkImg))));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: ((context) =>
+                      ReadingPage(title, date, category, linkImg))));
         },
         child: Container(
           padding: const EdgeInsets.fromLTRB(24, 20, 0, 20),

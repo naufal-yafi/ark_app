@@ -25,6 +25,9 @@ TextStyle textLogo_1 = TextStyle(
 TextStyle textLogo_2 = TextStyle(
     fontSize: 24, color: neutral_50, fontFamily: 'SourceSerifPro-Reguler');
 
+TextStyle titleRead = TextStyle(
+    fontSize: 22, color: neutral_50, fontFamily: 'SourceSerifPro-Bold');
+
 TextStyle sizeBody_2 = TextStyle(
     fontSize: 18, color: neutral_50, fontFamily: 'SourceSerifPro-Bold');
 TextStyle sizeBody_3 = TextStyle(

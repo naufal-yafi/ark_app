@@ -3,7 +3,7 @@ import 'package:ark_app/pages/login.dart';
 import 'package:ark_app/pages/starting.dart';
 import 'package:ark_app/pages/write.dart';
 import 'package:flutter/material.dart';
-import './../style/design_system.dart';
+import 'package:ark_app/style/design_system.dart';
 
 class Signup extends StatelessWidget {
   String condition = '';
