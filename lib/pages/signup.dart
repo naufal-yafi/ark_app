@@ -18,11 +18,11 @@ class Signup extends StatelessWidget {
           children: [
             Text(
               'arK',
-              style: textLogo_1,
+              style: display1Reguler,
             ),
             Text(
               'Artikel Kulo',
-              style: textLogo_2,
+              style: display3Reguler,
             )
           ],
         ),
@@ -39,7 +39,7 @@ class Signup extends StatelessWidget {
           ),
           Text(
             '${textLabel}',
-            style: label2,
+            style: body3Reguler,
           ),
           const SizedBox(
             height: 14,
@@ -56,7 +56,7 @@ class Signup extends StatelessWidget {
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                     borderSide: BorderSide(color: neutral_800)),
-                hintStyle: sizeBody_3,
+                hintStyle: body2Reguler,
                 hintText: '${textPlaceholder}'),
           ),
         ],
@@ -78,7 +78,7 @@ class Signup extends StatelessWidget {
           },
           child: Text(
             'Daftar',
-            style: label,
+            style: body1Reguler,
           ),
           style: ElevatedButton.styleFrom(backgroundColor: primary),
         ),
@@ -123,7 +123,7 @@ class Signup extends StatelessWidget {
                 children: [
                   Text(
                     'Sudah memiliki akun? ',
-                    style: sizeBody_3,
+                    style: body2Reguler,
                   ),
                   TextButton(
                       onPressed: () {
@@ -134,7 +134,7 @@ class Signup extends StatelessWidget {
                       },
                       child: Text(
                         'Masuk Sekarang',
-                        style: textBTN,
+                        style: body2Medium,
                       ))
                 ],
               )

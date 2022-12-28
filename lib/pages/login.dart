@@ -18,11 +18,11 @@ class Login extends StatelessWidget {
           children: [
             Text(
               'arK',
-              style: textLogo_1,
+              style: body1Reguler,
             ),
             Text(
               'Artikel Kulo',
-              style: textLogo_2,
+              style: display3Reguler,
             )
           ],
         ),
@@ -39,7 +39,7 @@ class Login extends StatelessWidget {
           ),
           Text(
             '${textLabel}',
-            style: label2,
+            style: body3Reguler,
           ),
           const SizedBox(
             height: 14,
@@ -56,7 +56,7 @@ class Login extends StatelessWidget {
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                     borderSide: BorderSide(color: neutral_800)),
-                hintStyle: sizeBody_3,
+                hintStyle: body2Reguler,
                 hintText: '${textPlaceholder}'),
           ),
         ],
@@ -78,7 +78,7 @@ class Login extends StatelessWidget {
           },
           child: Text(
             'Masuk',
-            style: label,
+            style: body1Reguler,
           ),
           style: ElevatedButton.styleFrom(backgroundColor: primary),
         ),
@@ -117,7 +117,7 @@ class Login extends StatelessWidget {
                       onPressed: () {},
                       child: Text(
                         'Lupa kata sandi?',
-                        style: sizeBody_3,
+                        style: body2Reguler,
                       ))
                 ],
               ),
@@ -134,7 +134,7 @@ class Login extends StatelessWidget {
                 children: [
                   Text(
                     'Belum memiliki akun? ',
-                    style: sizeBody_3,
+                    style: body2Reguler,
                   ),
                   TextButton(
                       onPressed: () {
@@ -145,7 +145,7 @@ class Login extends StatelessWidget {
                       },
                       child: Text(
                         'Daftar Sekarang',
-                        style: textBTN,
+                        style: body2Medium,
                       ))
                 ],
               )

@@ -16,14 +16,14 @@ class StartingUp extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "Artikel Kulo",
-                  style: sizeDisplay,
+                  style: display2SemiBold,
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
                   "Dapatkan apa yang belum kamu ketahui, dan bagikan apa yang telah kamu ketahui.",
-                  style: sizeHeading,
+                  style: heading3SemiBold,
                 ),
               ],
             ),
@@ -34,14 +34,14 @@ class StartingUp extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "Baca apapun disini, mulai dari topik desain, cerita pengalaman, dan topik - topik seru lainnya yang akan membuatmu betah untuk membaca, juga tentunya akan menambah wawasan kamu.",
-                  style: sizeBody_3,
+                  style: body2Reguler,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 Text(
                   "Selain membaca, kamu juga bisa menulis artikelmu sendiri dari gagasan, ide, ataupun informasi yang ingin kamu bagikan secara anonymous. Gunakan bahasa yang sopan dan menarik agar pembaca lainnyapun akan membaca artikelmu hingga selesai.",
-                  style: sizeBody_3,
+                  style: body2Reguler,
                 )
               ],
             )
@@ -70,7 +70,7 @@ class StartingUp extends StatelessWidget {
                   icon: const Icon(Icons.menu_book),
                   label: Text(
                     "Baca Artikel",
-                    style: label,
+                    style: body1Reguler,
                   ),
                   style: ElevatedButton.styleFrom(backgroundColor: primary),
                 ),
@@ -92,7 +92,7 @@ class StartingUp extends StatelessWidget {
                   icon: const Icon(Icons.create),
                   label: Text(
                     "Tulis Artikelmu",
-                    style: label,
+                    style: body1Reguler,
                   ),
                   style: OutlinedButton.styleFrom(
                       foregroundColor: neutral_50,

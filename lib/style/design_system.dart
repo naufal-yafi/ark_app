@@ -9,53 +9,65 @@ Color neutral_50 = const Color(0xffFAFAFA);
 
 Color primary = const Color(0xff581AEA);
 Color warning = const Color(0xffE85656);
-//* END Color Scheme
+//! END Color Scheme
 
 //! Typography
-TextStyle sizeDisplay = TextStyle(
+//* Source Serif Pro
+//? Display
+TextStyle display1Reguler = TextStyle(
+    fontSize: 58, color: neutral_50, fontFamily: 'SourceSerifPro-Reguler');
+TextStyle display2SemiBold = TextStyle(
     fontSize: 30, color: neutral_50, fontFamily: 'SourceSerifPro-SemiBold');
-TextStyle sizeHeading = TextStyle(
+TextStyle display3Reguler = TextStyle(
+    fontSize: 24, color: neutral_50, fontFamily: 'SourceSerifPro-Reguler');
+//? END Display
+
+//? Body
+TextStyle heading1Bold = TextStyle(
+    fontSize: 22, color: neutral_50, fontFamily: 'SourceSerifPro-Bold');
+TextStyle heading2Bold = TextStyle(
+    fontSize: 18, color: neutral_50, fontFamily: 'SourceSerifPro-Bold');
+TextStyle heading3SemiBold = TextStyle(
     fontSize: 16,
     height: 1.5,
     color: neutral_100,
     fontFamily: 'SourceSerifPro-SemiBold');
+//? END Body
+//* END Source Serif Pro
 
-TextStyle textLogo_1 = TextStyle(
-    fontSize: 58, color: neutral_50, fontFamily: 'SourceSerifPro-Reguler');
-TextStyle textLogo_2 = TextStyle(
-    fontSize: 24, color: neutral_50, fontFamily: 'SourceSerifPro-Reguler');
-
-TextStyle titleRead = TextStyle(
-    fontSize: 22, color: neutral_50, fontFamily: 'SourceSerifPro-Bold');
-
-TextStyle sizeBody_2 = TextStyle(
-    fontSize: 18, color: neutral_50, fontFamily: 'SourceSerifPro-Bold');
-TextStyle sizeBody_3 = TextStyle(
+//* Fira Sans
+//? Body
+TextStyle body1Reguler = TextStyle(
+    fontSize: 16,
+    fontFamily: 'FiraSans-Reguler',
+    letterSpacing: .5,
+    color: neutral_50);
+TextStyle body2Reguler = TextStyle(
     fontSize: 14,
     color: neutral_200,
     fontFamily: 'FiraSans-Reguler',
     height: 1.5);
-TextStyle sizeBody_4 =
-    TextStyle(fontSize: 11, color: neutral_100, fontFamily: 'FiraSans-Reguler');
-TextStyle sizeBody_5 =
-    TextStyle(fontSize: 12, color: neutral_100, fontFamily: 'FiraSans-Reguler');
-
-TextStyle textBTN = TextStyle(
+TextStyle body2Medium = TextStyle(
     fontSize: 14,
     fontFamily: 'FiraSans-Medium',
     color: neutral_50,
     height: 1.5,
     decoration: TextDecoration.underline);
-
-TextStyle label = TextStyle(
-    fontSize: 16,
+TextStyle body3Reguler = TextStyle(
+    fontSize: 12,
     fontFamily: 'FiraSans-Reguler',
-    letterSpacing: .5,
-    color: neutral_50);
+    color: neutral_50,
+    letterSpacing: .7);
+//? END Body
 
-TextStyle label2 = TextStyle(
-    fontFamily: 'FiraSans-Reguler', color: neutral_50, letterSpacing: .7);
-//* END Typography
+//? Label
+TextStyle label1Reguler =
+    TextStyle(fontSize: 12, color: neutral_100, fontFamily: 'FiraSans-Reguler');
+TextStyle label2Reguler =
+    TextStyle(fontSize: 11, color: neutral_100, fontFamily: 'FiraSans-Reguler');
+//? END Label
+//* END Fira Sans
+//! END Typography
 
 EdgeInsets paddingScreen =
     const EdgeInsets.symmetric(vertical: 30, horizontal: 24);

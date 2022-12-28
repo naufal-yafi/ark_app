@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                     //! Category
                     Text(
                       "${category}",
-                      style: sizeBody_4,
+                      style: label2Reguler,
                     ),
                     const SizedBox(
                       height: 8,
@@ -62,14 +62,14 @@ class _HomePageState extends State<HomePage> {
                       "${title}",
                       maxLines: 3,
                       overflow: TextOverflow.clip,
-                      style: sizeBody_2,
+                      style: heading2Bold,
                     ),
                     const SizedBox(
                       height: 9,
                     ),
                     Text(
                       "${see} x dibaca • ${date}",
-                      style: sizeBody_5,
+                      style: label1Reguler,
                     )
                   ],
                 ),

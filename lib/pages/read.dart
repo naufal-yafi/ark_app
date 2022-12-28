@@ -29,7 +29,7 @@ class _ReadingPageState extends State<ReadingPage> {
       children: <Widget>[
         Text(
           "${title}",
-          style: titleRead,
+          style: heading1Bold,
         ),
         const SizedBox(
           height: 12,
