@@ -67,8 +67,8 @@ class Login extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {
             if (condition == 'baca') {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Home('username')));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => HomePage()));
             }
           },
           child: Text(
