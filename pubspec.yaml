@@ -82,15 +82,15 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: FiraCode-Reguler
+    - family: FiraSans-Reguler
       fonts:
-        - asset: assets/fonts/firacode/FiraCode-Regular.ttf
-    - family: FiraCode-Medium
+        - asset: assets/fonts/firasans/FiraSans-Regular.ttf
+    - family: FiraSans-Medium
       fonts:
-        - asset: assets/fonts/firacode/FiraCode-Medium.ttf
-    - family: FiraCode-Bold
+        - asset: assets/fonts/firasans/FiraSans-Medium.ttf
+    - family: FiraSans-Bold
       fonts:
-        - asset: assets/fonts/firacode/FiraCode-Bold.ttf
+        - asset: assets/fonts/firasans/FiraSans-Bold.ttf
     - family: SourceSerifPro-Reguler
       fonts:
         - asset: assets/fonts/sourceserifpro/SourceSerifPro-Regular.ttf
