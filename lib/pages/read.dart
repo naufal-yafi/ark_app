@@ -1,3 +1,4 @@
+import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/style/design_system.dart';
 import 'package:flutter/material.dart';
 
@@ -62,7 +63,7 @@ class _ReadingPageState extends State<ReadingPage> {
       child: ElevatedButton.icon(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Home()));
+              context, MaterialPageRoute(builder: (context) => HomePage()));
         },
         icon: const Icon(Icons.subdirectory_arrow_left),
         label: const Text(
@@ -78,7 +79,6 @@ class _ReadingPageState extends State<ReadingPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'read  ${title}',
-      theme: ThemeData(textTheme: GoogleFonts.firaSansTextTheme()),
       home: Scaffold(
           body: Stack(
         children: [
