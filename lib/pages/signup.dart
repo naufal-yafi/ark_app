@@ -22,7 +22,7 @@ class Signup extends StatelessWidget {
             ),
             Text(
               'Artikel Kulo',
-              style: display3Reguler,
+              style: heading1Reguler,
             )
           ],
         ),

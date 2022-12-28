@@ -8,34 +8,32 @@ Color neutral_100 = const Color(0xffB8B8B8);
 Color neutral_50 = const Color(0xffFAFAFA);
 
 Color primary = const Color(0xff581AEA);
-Color warning = const Color(0xffE85656);
 //! END Color Scheme
 
 //! Typography
-//* Source Serif Pro
 //? Display
 TextStyle display1Reguler = TextStyle(
     fontSize: 58, color: neutral_50, fontFamily: 'SourceSerifPro-Reguler');
 TextStyle display2SemiBold = TextStyle(
     fontSize: 30, color: neutral_50, fontFamily: 'SourceSerifPro-SemiBold');
-TextStyle display3Reguler = TextStyle(
-    fontSize: 24, color: neutral_50, fontFamily: 'SourceSerifPro-Reguler');
 //? END Display
 
-//? Body
-TextStyle heading1Bold = TextStyle(
-    fontSize: 22, color: neutral_50, fontFamily: 'SourceSerifPro-Bold');
+//? Heading
+TextStyle heading1Reguler = TextStyle(
+    fontSize: 24, color: neutral_50, fontFamily: 'SourceSerifPro-Reguler');
+TextStyle heading1Bold =
+    TextStyle(fontSize: 24, color: neutral_50, fontFamily: 'FiraSans-Bold');
 TextStyle heading2Bold = TextStyle(
+    fontSize: 22, color: neutral_50, fontFamily: 'SourceSerifPro-Bold');
+TextStyle heading3Bold = TextStyle(
     fontSize: 18, color: neutral_50, fontFamily: 'SourceSerifPro-Bold');
 TextStyle heading3SemiBold = TextStyle(
     fontSize: 16,
     height: 1.5,
     color: neutral_100,
     fontFamily: 'SourceSerifPro-SemiBold');
-//? END Body
-//* END Source Serif Pro
+//? END Heading
 
-//* Fira Sans
 //? Body
 TextStyle body1Reguler = TextStyle(
     fontSize: 16,
@@ -45,6 +43,11 @@ TextStyle body1Reguler = TextStyle(
 TextStyle body2Reguler = TextStyle(
     fontSize: 14,
     color: neutral_200,
+    fontFamily: 'FiraSans-Reguler',
+    height: 1.5);
+TextStyle body2RegulerShade100 = TextStyle(
+    fontSize: 14,
+    color: neutral_100,
     fontFamily: 'FiraSans-Reguler',
     height: 1.5);
 TextStyle body2Medium = TextStyle(
@@ -66,7 +69,6 @@ TextStyle label1Reguler =
 TextStyle label2Reguler =
     TextStyle(fontSize: 11, color: neutral_100, fontFamily: 'FiraSans-Reguler');
 //? END Label
-//* END Fira Sans
 //! END Typography
 
 EdgeInsets paddingScreen =

@@ -18,11 +18,11 @@ class Login extends StatelessWidget {
           children: [
             Text(
               'arK',
-              style: body1Reguler,
+              style: display1Reguler,
             ),
             Text(
               'Artikel Kulo',
-              style: display3Reguler,
+              style: heading1Reguler,
             )
           ],
         ),
@@ -41,23 +41,21 @@ class Login extends StatelessWidget {
             '${textLabel}',
             style: body3Reguler,
           ),
-          const SizedBox(
-            height: 14,
-          ),
-          TextField(
-            obscureText: stylePassword,
-            decoration: InputDecoration(
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                filled: true,
-                fillColor: neutral_800,
-                focusedBorder:
-                    OutlineInputBorder(borderSide: BorderSide(color: primary)),
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: neutral_800)),
-                hintStyle: body2Reguler,
-                hintText: '${textPlaceholder}'),
+          Container(
+            margin: const EdgeInsets.only(top: 14),
+            padding: const EdgeInsets.fromLTRB(15, 5, 10, 5),
+            color: neutral_800,
+            child: TextField(
+              obscureText: stylePassword,
+              decoration: InputDecoration(
+                  contentPadding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: primary)),
+                  border: InputBorder.none,
+                  hintStyle: body2Reguler,
+                  hintText: '${textPlaceholder}'),
+            ),
           ),
         ],
       );

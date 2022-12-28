@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                       "${title}",
                       maxLines: 3,
                       overflow: TextOverflow.clip,
-                      style: heading2Bold,
+                      style: heading3Bold,
                     ),
                     const SizedBox(
                       height: 9,
