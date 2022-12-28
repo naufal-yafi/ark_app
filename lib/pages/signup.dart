@@ -1,12 +1,13 @@
 import 'package:ark_app/pages/home.dart';
-import 'package:ark_app/pages/signup.dart';
+import 'package:ark_app/pages/login.dart';
 import 'package:ark_app/pages/starting.dart';
+import 'package:ark_app/pages/write.dart';
 import 'package:flutter/material.dart';
 import './../style/design_system.dart';
 
-class Login extends StatelessWidget {
+class Signup extends StatelessWidget {
   String condition = '';
-  Login(this.condition);
+  Signup(this.condition);
 
   @override
   Widget build(BuildContext context) {
@@ -70,10 +71,13 @@ class Login extends StatelessWidget {
             if (condition == 'baca') {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => HomePage()));
+            } else {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => WritePage()));
             }
           },
           child: Text(
-            'Masuk',
+            'Daftar',
             style: label,
           ),
           style: ElevatedButton.styleFrom(backgroundColor: primary),
@@ -102,21 +106,10 @@ class Login extends StatelessWidget {
                 height: 26,
               ),
               userInput('Nama Akun', 'Masukkan nama akun kamu', false),
+              userInput('Email', 'Masukkan email kamu', false),
               userInput('Kata Sandi', 'Masukkan kata sandi kamu', true),
-              const SizedBox(
-                height: 4,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Lupa kata sandi?',
-                        style: sizeBody_3,
-                      ))
-                ],
-              ),
+              userInput('Tulis Ulang Kata Sandi',
+                  'Masukkan kata sandi kamu kembali', true),
               const SizedBox(
                 height: 34,
               ),
@@ -129,7 +122,7 @@ class Login extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Belum memiliki akun? ',
+                    'Sudah memiliki akun? ',
                     style: sizeBody_3,
                   ),
                   TextButton(
@@ -137,10 +130,10 @@ class Login extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Signup('${condition}')));
+                                builder: (context) => Login('${condition}')));
                       },
                       child: Text(
-                        'Daftar Sekarang',
+                        'Masuk Sekarang',
                         style: textBTN,
                       ))
                 ],
