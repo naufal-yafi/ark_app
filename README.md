@@ -1,16 +1,12 @@
-# ark_app
+![totalDownloads](https://img.shields.io/github/downloads/naufal-yafi/ark_app/total?style=flat-square) ![size](https://img.shields.io/github/repo-size/naufal-yafi/ark_app) ![contributor](https://img.shields.io/github/contributors/naufal-yafi/ark_app?style=flat-square) ![license](https://img.shields.io/github/license/naufal-yafi/ark_app?style=flat-square)
 
-A new Flutter project.
+#arK | Artikel Kulo
+#####Lecture: Bambang Ismanto, M.KOM.
+This project is the final project of the Mobile I course lecture, where the material is still focused on the appearance of a mobile application itself. So, this app has no dynamic storage and does not capture data from anywhere. The text and images displayed are only static or have been manually set to display.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<a href="be.net/naufal-yafi">
+    <img src="https://img.shields.io/badge/Behance-1769ff?style=for-the-badge&logo=behance&logoColor=white">
+</a>
+<a href="medium.com/@muhammadnaufalyafi00">
+    <img src="https://img.shields.io/badge/Medium-252525?style=for-the-badge&logo=medium&logoColor=white">
+</a>
