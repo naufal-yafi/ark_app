@@ -43,13 +43,16 @@ class Login extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.only(top: 14),
-            padding: const EdgeInsets.fromLTRB(15, 5, 10, 5),
-            color: neutral_800,
+            decoration: BoxDecoration(
+                color: neutral_800,
+                borderRadius: const BorderRadius.all(Radius.circular(8))),
             child: TextField(
+              style: TextStyle(color: neutral_50),
+              cursorColor: neutral_50,
               obscureText: stylePassword,
               decoration: InputDecoration(
                   contentPadding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: primary)),
                   border: InputBorder.none,
@@ -84,7 +87,7 @@ class Login extends StatelessWidget {
     }
 
     return MaterialApp(
-      title: 'arK | Login',
+      title: 'arK | Masuk',
       home: Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -103,8 +106,8 @@ class Login extends StatelessWidget {
               const SizedBox(
                 height: 26,
               ),
-              userInput('Nama Akun', 'Masukkan nama akun kamu', false),
-              userInput('Kata Sandi', 'Masukkan kata sandi kamu', true),
+              userInput('Email', 'Masukkan emailmu', false),
+              userInput('Kata Sandi', 'Masukkan kata sandimu', true),
               const SizedBox(
                 height: 4,
               ),

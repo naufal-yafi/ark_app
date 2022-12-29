@@ -95,7 +95,9 @@ class WritePage extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(top: 8),
               padding: const EdgeInsets.fromLTRB(15, 5, 10, 5),
-              color: neutral_800,
+              decoration: BoxDecoration(
+                  color: neutral_800,
+                  borderRadius: const BorderRadius.all(Radius.circular(8))),
               child: TextField(
                 decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(

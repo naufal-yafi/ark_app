@@ -31,36 +31,72 @@ class Signup extends StatelessWidget {
 
     //! TEXT INPUT
     userInput(textLabel, textPlaceholder, stylePassword) {
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(
-            height: 40,
-          ),
-          Text(
-            '${textLabel}',
-            style: body3Reguler,
-          ),
-          const SizedBox(
-            height: 14,
-          ),
-          TextField(
-            obscureText: stylePassword,
-            decoration: InputDecoration(
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                filled: true,
-                fillColor: neutral_800,
-                focusedBorder:
-                    OutlineInputBorder(borderSide: BorderSide(color: primary)),
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: neutral_800)),
-                hintStyle: body2Reguler,
-                hintText: '${textPlaceholder}'),
-          ),
-        ],
-      );
+      if (textLabel == 'Email') {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 40,
+            ),
+            Text(
+              '${textLabel}',
+              style: body3Reguler,
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 14),
+              decoration: BoxDecoration(
+                  color: neutral_800,
+                  borderRadius: const BorderRadius.all(Radius.circular(8))),
+              child: TextField(
+                style: TextStyle(color: neutral_50),
+                cursorColor: neutral_50,
+                obscureText: stylePassword,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 20, horizontal: 20),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: primary)),
+                    border: InputBorder.none,
+                    hintStyle: body2Reguler,
+                    hintText: '${textPlaceholder}'),
+              ),
+            ),
+          ],
+        );
+      } else {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 40,
+            ),
+            Text(
+              '${textLabel}',
+              style: body3Reguler,
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 14),
+              decoration: BoxDecoration(
+                  color: neutral_800,
+                  borderRadius: const BorderRadius.all(Radius.circular(8))),
+              child: TextField(
+                style: TextStyle(color: neutral_50),
+                cursorColor: neutral_50,
+                obscureText: stylePassword,
+                decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 20, horizontal: 20),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: primary)),
+                    border: InputBorder.none,
+                    hintStyle: body2Reguler,
+                    hintText: '${textPlaceholder}'),
+              ),
+            ),
+          ],
+        );
+      }
     }
 
     btnLogin() {
@@ -86,7 +122,7 @@ class Signup extends StatelessWidget {
     }
 
     return MaterialApp(
-      title: 'arK | Login',
+      title: 'arK | Daftar',
       home: Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -105,11 +141,11 @@ class Signup extends StatelessWidget {
               const SizedBox(
                 height: 26,
               ),
-              userInput('Nama Akun', 'Masukkan nama akun kamu', false),
-              userInput('Email', 'Masukkan email kamu', false),
-              userInput('Kata Sandi', 'Masukkan kata sandi kamu', true),
+              userInput('Nama', 'Masukkan namamu', false),
+              userInput('Email', 'Masukkan emailmu', false),
+              userInput('Kata Sandi', 'Masukkan kata sandimu', true),
               userInput('Tulis Ulang Kata Sandi',
-                  'Masukkan kata sandi kamu kembali', true),
+                  'Masukkan kata sandimu kembali', true),
               const SizedBox(
                 height: 34,
               ),
