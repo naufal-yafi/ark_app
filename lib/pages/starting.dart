@@ -40,7 +40,7 @@ class StartingUp extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  "Selain membaca, kamu juga bisa menulis artikelmu sendiri dari gagasan, ide, ataupun informasi yang ingin kamu bagikan secara anonymous. Gunakan bahasa yang sopan dan menarik agar pembaca lainnyapun akan membaca artikelmu hingga selesai.",
+                  "Selain membaca, kamu juga bisa menulis artikelmu sendiri dari gagasan, ide, ataupun informasi yang ingin kamu bagikan. Gunakan bahasa yang sopan dan menarik agar pembaca lainnyapun akan membaca artikelmu hingga selesai.",
                   style: body2Reguler,
                 )
               ],

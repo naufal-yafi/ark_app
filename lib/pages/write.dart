@@ -68,11 +68,17 @@ class WritePage extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(top: 8),
-              padding: const EdgeInsets.fromLTRB(15, 5, 10, 0),
-              height: 120,
-              color: neutral_800,
+              decoration: BoxDecoration(
+                  color: neutral_800,
+                  borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: TextField(
+                style: TextStyle(color: neutral_50),
+                cursorColor: neutral_50,
+                minLines: 4,
+                maxLines: 100,
                 decoration: InputDecoration(
+                  contentPadding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: primary)),
                   border: InputBorder.none,
@@ -94,12 +100,15 @@ class WritePage extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(top: 8),
-              padding: const EdgeInsets.fromLTRB(15, 5, 10, 5),
               decoration: BoxDecoration(
                   color: neutral_800,
-                  borderRadius: const BorderRadius.all(Radius.circular(8))),
+                  borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: TextField(
+                style: TextStyle(color: neutral_50),
+                cursorColor: neutral_50,
                 decoration: InputDecoration(
+                  contentPadding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: primary)),
                   border: InputBorder.none,

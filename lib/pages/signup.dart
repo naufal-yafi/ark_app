@@ -46,7 +46,7 @@ class Signup extends StatelessWidget {
               margin: const EdgeInsets.only(top: 14),
               decoration: BoxDecoration(
                   color: neutral_800,
-                  borderRadius: const BorderRadius.all(Radius.circular(8))),
+                  borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: TextField(
                 style: TextStyle(color: neutral_50),
                 cursorColor: neutral_50,
@@ -79,7 +79,7 @@ class Signup extends StatelessWidget {
               margin: const EdgeInsets.only(top: 14),
               decoration: BoxDecoration(
                   color: neutral_800,
-                  borderRadius: const BorderRadius.all(Radius.circular(8))),
+                  borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: TextField(
                 style: TextStyle(color: neutral_50),
                 cursorColor: neutral_50,
