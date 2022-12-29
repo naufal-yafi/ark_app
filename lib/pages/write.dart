@@ -102,32 +102,33 @@ class WritePage extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(top: 8),
-              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               decoration: BoxDecoration(
                   border: Border.all(color: neutral_800),
                   borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: Row(
                 children: <Widget>[
                   SizedBox(
-                    height: 45,
-                    width: 150,
+                    height: 35,
+                    width: 120,
                     child: ElevatedButton.icon(
                       onPressed: () {},
                       icon: const Icon(
                         Icons.image,
-                        size: 14,
+                        size: 16,
                       ),
-                      label: Text('Pilih Gambar', style: body3Reguler),
+                      label:
+                          Text('Pilih Gambar', style: caption1RegulerShade50),
                       style: ElevatedButton.styleFrom(
                           backgroundColor: neutral_800),
                     ),
                   ),
                   const SizedBox(
-                    width: 20,
+                    width: 15,
                   ),
                   Text(
                     '*.jpg, *.jpeg, *.png',
-                    style: label1Reguler,
+                    style: caption1RegulerShade100,
                   )
                 ],
               ),

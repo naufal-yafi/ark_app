@@ -69,6 +69,10 @@ TextStyle label1Reguler =
 TextStyle label2Reguler =
     TextStyle(fontSize: 11, color: neutral_100, fontFamily: 'FiraSans-Reguler');
 //? END Label
+TextStyle caption1RegulerShade50 =
+    TextStyle(fontSize: 10, color: neutral_100, fontFamily: 'FiraSans-Reguler');
+TextStyle caption1RegulerShade100 =
+    TextStyle(fontSize: 10, color: neutral_100, fontFamily: 'FiraSans-Reguler');
 //! END Typography
 
 EdgeInsets paddingScreen =

@@ -86,6 +86,35 @@ class Login extends StatelessWidget {
       );
     }
 
+    btnGoogle() {
+      return InkWell(
+        onTap: () {
+          if (condition == 'baca') {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => HomePage()));
+          } else {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => WritePage()));
+          }
+        },
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          decoration: BoxDecoration(
+              color: neutral_800, borderRadius: BorderRadius.circular(6)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset('images/googleLogo.png'),
+              const SizedBox(
+                width: 24,
+              ),
+              Text('Masuk dengan Google', style: label1Reguler)
+            ],
+          ),
+        ),
+      );
+    }
+
     return MaterialApp(
       title: 'arK | Masuk',
       home: Scaffold(
@@ -150,7 +179,11 @@ class Login extends StatelessWidget {
                         style: body2Medium,
                       ))
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 34,
+              ),
+              btnGoogle()
             ],
           ),
         ),
