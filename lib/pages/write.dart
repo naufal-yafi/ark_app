@@ -74,8 +74,8 @@ class WritePage extends StatelessWidget {
               child: TextField(
                 style: TextStyle(color: neutral_50),
                 cursorColor: neutral_50,
-                minLines: 4,
-                maxLines: 100,
+                minLines: 15,
+                maxLines: 1000,
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
@@ -85,6 +85,51 @@ class WritePage extends StatelessWidget {
                   hintStyle: body2Reguler,
                   hintText: "${hint}",
                 ),
+              ),
+            )
+          ],
+        );
+      } else if (label == "Gambar") {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const SizedBox(
+              height: 24,
+            ),
+            Text(
+              "${label}",
+              style: body3Reguler,
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 8),
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              decoration: BoxDecoration(
+                  border: Border.all(color: neutral_800),
+                  borderRadius: const BorderRadius.all(Radius.circular(5))),
+              child: Row(
+                children: <Widget>[
+                  SizedBox(
+                    height: 45,
+                    width: 150,
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.image,
+                        size: 14,
+                      ),
+                      label: Text('Pilih Gambar', style: body3Reguler),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: neutral_800),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    '*.jpg, *.jpeg, *.png',
+                    style: label1Reguler,
+                  )
+                ],
               ),
             )
           ],
@@ -124,7 +169,7 @@ class WritePage extends StatelessWidget {
 
     createArt() {
       return Container(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.fromLTRB(20, 100, 20, 20),
         child: ListView(
           children: <Widget>[
             Text(
@@ -143,17 +188,9 @@ class WritePage extends StatelessWidget {
     return MaterialApp(
       title: "arK | Tulis",
       home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
-              },
-              icon: const Icon(Icons.close)),
-        ),
         backgroundColor: neutral_900,
         body: Stack(
-          children: <Widget>[createArt()],
+          children: <Widget>[appBar(), createArt()],
         ),
       ),
       debugShowCheckedModeBanner: false,

@@ -90,6 +90,7 @@ class Login extends StatelessWidget {
       title: 'arK | Masuk',
       home: Scaffold(
         appBar: AppBar(
+          elevation: 0,
           leading: IconButton(
               onPressed: () {
                 Navigator.push(context,

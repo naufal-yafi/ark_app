@@ -125,6 +125,7 @@ class Signup extends StatelessWidget {
       title: 'arK | Daftar',
       home: Scaffold(
         appBar: AppBar(
+          elevation: 0,
           leading: IconButton(
               onPressed: () {
                 Navigator.push(context,
