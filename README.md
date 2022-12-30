@@ -37,9 +37,9 @@ This project is the final project of the learning subject Mobile 1, where the ma
 </ul>
 
 <h4>Design Process on:</h4>
-<a href="be.net/naufal-yafi">
+<a href="https://www.behance.net/naufal-yafi">
     <img src="https://img.shields.io/badge/Behance-1769ff?style=for-the-badge&logo=behance&logoColor=white" height="35px">
 </a>
-<a href="medium.com/@muhammadnaufalyafi00">
+<a href="https://medium.com/@muhammadnaufalyafi00">
     <img src="https://img.shields.io/badge/Medium-252525?style=for-the-badge&logo=medium&logoColor=white" height="35px">
 </a>
