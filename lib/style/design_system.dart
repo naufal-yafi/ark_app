@@ -66,6 +66,10 @@ TextStyle body3Reguler = TextStyle(
 //? Label
 TextStyle label1Reguler =
     TextStyle(fontSize: 12, color: neutral_100, fontFamily: 'FiraSans-Reguler');
+TextStyle label1RegulerShade50 =
+    TextStyle(fontSize: 12, color: neutral_50, fontFamily: 'FiraSans-Reguler');
+TextStyle label1RegulerShade200 =
+    TextStyle(fontSize: 12, color: neutral_200, fontFamily: 'FiraSans-Reguler');
 TextStyle label2Reguler =
     TextStyle(fontSize: 11, color: neutral_100, fontFamily: 'FiraSans-Reguler');
 //? END Label

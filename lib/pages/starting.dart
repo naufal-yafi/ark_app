@@ -1,3 +1,4 @@
+import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:ark_app/style/design_system.dart';
@@ -65,7 +66,9 @@ class StartingUp extends StatelessWidget {
                 child: ElevatedButton.icon(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Login("baca")));
+                        MaterialPageRoute(builder: (context) => HomePage()));
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) => Login("baca")));
                   },
                   icon: const Icon(Icons.menu_book),
                   label: Text(

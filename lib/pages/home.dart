@@ -1,18 +1,10 @@
-import 'package:ark_app/pages/account.dart';
+import 'package:ark_app/pages/yourAccount.dart';
 import 'package:ark_app/pages/write.dart';
 import 'package:ark_app/pages/read.dart';
 import 'package:flutter/material.dart';
 import 'package:ark_app/style/design_system.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int currentTab = 0;
-  final List<Widget> screens = [WritePage(), AccountPage()];
-
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     artikelCard(String linkImg, String title, String see, String category,
@@ -82,7 +74,7 @@ class _HomePageState extends State<HomePage> {
 
     artikelGroup() {
       return Container(
-        padding: const EdgeInsets.only(top: 114, bottom: 100),
+        padding: const EdgeInsets.only(top: 114, bottom: 80),
         child: ListView(
           children: <Widget>[
             artikelCard(
@@ -176,7 +168,86 @@ class _HomePageState extends State<HomePage> {
     }
 
     bottomBar() {
-      return Text('data');
+      return Align(
+        alignment: Alignment.bottomLeft,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          height: 80,
+          color: neutral_900,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              //! HOME
+              InkWell(
+                onTap: () {},
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(
+                      Icons.home,
+                      color: neutral_50,
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Beranda",
+                      style: label1RegulerShade50,
+                    )
+                  ],
+                ),
+              ),
+              //! HOME
+              //! WRITING
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => WritePage()));
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 15),
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                      color: primary,
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(50))),
+                  child: Icon(
+                    Icons.edit,
+                    color: neutral_50,
+                  ),
+                ),
+              ),
+              //! WRITING
+              //! ACCOUNT
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => YourAccountPage()));
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(
+                      Icons.account_circle,
+                      color: neutral_200,
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Saya",
+                      style: label1RegulerShade200,
+                    )
+                  ],
+                ),
+              ),
+              //! ACCOUNT
+            ],
+          ),
+        ),
+      );
     }
 
     return MaterialApp(
@@ -184,7 +255,7 @@ class _HomePageState extends State<HomePage> {
       home: Scaffold(
         backgroundColor: neutral_900,
         body: Stack(
-          children: [artikelGroup(), searchBar()],
+          children: [artikelGroup(), searchBar(), bottomBar()],
         ),
       ),
       debugShowCheckedModeBanner: false,
