@@ -1,5 +1,6 @@
 import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/login.dart';
+import 'package:ark_app/pages/yourAccount.dart';
 import 'package:flutter/material.dart';
 import 'package:ark_app/style/design_system.dart';
 
@@ -59,14 +60,16 @@ class StartingUp extends StatelessWidget {
           height: 150,
           child: Column(
             children: <Widget>[
-              //* PRIMARY BUTTON
+              //! PRIMARY BUTTON
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 60,
                 child: ElevatedButton.icon(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomePage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => YourAccountPage()));
                     // Navigator.push(context,
                     //     MaterialPageRoute(builder: (context) => Login("baca")));
                   },
@@ -78,10 +81,11 @@ class StartingUp extends StatelessWidget {
                   style: ElevatedButton.styleFrom(backgroundColor: primary),
                 ),
               ),
+              //! PRIMARY BUTTON
               const SizedBox(
                 height: 20,
               ),
-              //* SECONDARY BUTTON
+              //! SECONDARY BUTTON
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 60,
@@ -102,6 +106,7 @@ class StartingUp extends StatelessWidget {
                       side: BorderSide(color: neutral_50)),
                 ),
               )
+              //! SECONDARY BUTTON
             ],
           ),
         ),

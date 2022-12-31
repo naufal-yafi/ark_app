@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //! Color Scheme
 Color neutral_900 = const Color(0xff252525);
 Color neutral_800 = const Color(0xff313131);
+Color neutral_300 = const Color(0xff818181);
 Color neutral_200 = const Color(0xffA1A1A1);
 Color neutral_100 = const Color(0xffB8B8B8);
 Color neutral_50 = const Color(0xffFAFAFA);
@@ -16,6 +17,8 @@ TextStyle display1Reguler = TextStyle(
     fontSize: 58, color: neutral_50, fontFamily: 'SourceSerifPro-Reguler');
 TextStyle display2SemiBold = TextStyle(
     fontSize: 30, color: neutral_50, fontFamily: 'SourceSerifPro-SemiBold');
+TextStyle display2Bold =
+    TextStyle(fontSize: 30, color: neutral_50, fontFamily: 'FiraSans-Bold');
 //? END Display
 
 //? Heading
@@ -45,9 +48,16 @@ TextStyle body2Reguler = TextStyle(
     color: neutral_200,
     fontFamily: 'FiraSans-Reguler',
     height: 1.5);
+TextStyle body2BoldShade900 = TextStyle(
+    fontSize: 14, color: neutral_900, fontFamily: 'FiraSans-Bold', height: 1.5);
 TextStyle body2RegulerShade100 = TextStyle(
     fontSize: 14,
     color: neutral_100,
+    fontFamily: 'FiraSans-Reguler',
+    height: 1.5);
+TextStyle body2RegulerShade50 = TextStyle(
+    fontSize: 14,
+    color: neutral_50,
     fontFamily: 'FiraSans-Reguler',
     height: 1.5);
 TextStyle body2Medium = TextStyle(
