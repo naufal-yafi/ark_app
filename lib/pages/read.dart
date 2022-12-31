@@ -1,4 +1,5 @@
 import 'package:ark_app/pages/home.dart';
+import 'package:ark_app/pages/writerAccount.dart';
 import 'package:ark_app/style/design_system.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,12 @@ class _ReadingPageState extends State<ReadingPage> {
               style: body2RegulerShade100,
             ),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => WriterAccountPage()));
+                },
                 child: Text(
                   "Muhammad Naufal Yafi'",
                   style: body2Reguler,

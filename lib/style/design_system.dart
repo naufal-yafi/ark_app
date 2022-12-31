@@ -48,6 +48,11 @@ TextStyle body2Reguler = TextStyle(
     color: neutral_200,
     fontFamily: 'FiraSans-Reguler',
     height: 1.5);
+TextStyle body2BoldShade50 = TextStyle(
+    fontSize: 14,
+    color: neutral_50,
+    fontFamily: 'FiraSans-SemiBold',
+    height: 1.5);
 TextStyle body2BoldShade900 = TextStyle(
     fontSize: 14, color: neutral_900, fontFamily: 'FiraSans-Bold', height: 1.5);
 TextStyle body2RegulerShade100 = TextStyle(

@@ -1,5 +1,6 @@
 import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/login.dart';
+import 'package:ark_app/pages/writerAccount.dart';
 import 'package:ark_app/pages/yourAccount.dart';
 import 'package:flutter/material.dart';
 import 'package:ark_app/style/design_system.dart';
@@ -66,12 +67,8 @@ class StartingUp extends StatelessWidget {
                 height: 60,
                 child: ElevatedButton.icon(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => YourAccountPage()));
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => Login("baca")));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login("baca")));
                   },
                   icon: const Icon(Icons.menu_book),
                   label: Text(

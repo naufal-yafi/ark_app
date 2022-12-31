@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:ark_app/pages/home.dart';
+import 'package:ark_app/pages/login.dart';
 import 'package:ark_app/pages/starting.dart';
 import 'package:ark_app/pages/write.dart';
 import 'package:ark_app/style/design_system.dart';
@@ -62,7 +63,7 @@ class YourAccountPage extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => StartingUp()));
+                        MaterialPageRoute(builder: (context) => Login("baca")));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
