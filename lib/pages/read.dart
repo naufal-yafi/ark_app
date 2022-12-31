@@ -24,12 +24,29 @@ class _ReadingPageState extends State<ReadingPage> {
           style: heading2Bold,
         ),
         const SizedBox(
-          height: 12,
+          height: 2,
         ),
         Text(
           "${date} • ${category}",
           style: body2Reguler,
         ),
+        const SizedBox(
+          height: 10,
+        ),
+        Row(
+          children: <Widget>[
+            Text(
+              "Penulis: ",
+              style: body2RegulerShade100,
+            ),
+            TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Muhammad Naufal Yafi'",
+                  style: body2Reguler,
+                ))
+          ],
+        )
       ],
     );
   }
@@ -84,7 +101,7 @@ class _ReadingPageState extends State<ReadingPage> {
                 children: <Widget>[
                   articleAppbar(),
                   Container(
-                    padding: const EdgeInsets.only(top: 120, bottom: 30),
+                    padding: const EdgeInsets.only(top: 125, bottom: 30),
                     child: articleRead(),
                   )
                 ],
