@@ -45,7 +45,8 @@ class _ReadingPageState extends State<ReadingPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => WriterAccountPage()));
+                          builder: (context) =>
+                              WriterAccountPage(title, date, category, image)));
                 },
                 child: Text(
                   "Muhammad Naufal Yafi'",

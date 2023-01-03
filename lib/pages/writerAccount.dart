@@ -1,14 +1,14 @@
-import 'dart:html';
-
 import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/read.dart';
-import 'package:ark_app/pages/starting.dart';
 import 'package:ark_app/pages/write.dart';
 import 'package:ark_app/pages/yourAccount.dart';
 import 'package:ark_app/style/design_system.dart';
 import 'package:flutter/material.dart';
 
 class WriterAccountPage extends StatelessWidget {
+  String title, date, category, image;
+  WriterAccountPage(this.title, this.date, this.category, this.image);
+
   @override
   Widget build(BuildContext context) {
     artikelCard(String linkImg, String title, String see, String category,
@@ -406,8 +406,11 @@ class WriterAccountPage extends StatelessWidget {
           backgroundColor: neutral_900,
           leading: IconButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            ReadingPage(title, date, category, image)));
               },
               icon: Icon(
                 Icons.arrow_back,
@@ -418,20 +421,18 @@ class WriterAccountPage extends StatelessWidget {
             style: body2RegulerShade50,
           ),
         ),
-        body: Container(
-          child: Stack(
-            children: <Widget>[
-              ListView(
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(bottom: 90),
-                    child: dashboard(),
-                  )
-                ],
-              ),
-              bottomBar()
-            ],
-          ),
+        body: Stack(
+          children: <Widget>[
+            ListView(
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(bottom: 90),
+                  child: dashboard(),
+                )
+              ],
+            ),
+            bottomBar()
+          ],
         ),
       ),
       debugShowCheckedModeBanner: false,
