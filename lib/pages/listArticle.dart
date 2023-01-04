@@ -146,6 +146,8 @@ class ListArticle extends StatelessWidget {
               color: neutral_100,
             ),
             title: TextField(
+              style: TextStyle(color: neutral_50),
+              cursorColor: neutral_50,
               decoration: InputDecoration(
                   hintText: "Cari topik kesukaanmu disini...",
                   hintStyle: TextStyle(

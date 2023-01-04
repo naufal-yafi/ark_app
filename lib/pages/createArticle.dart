@@ -1,9 +1,8 @@
-import 'package:ark_app/pages/home.dart';
-import 'package:ark_app/pages/yourAccount.dart';
+import 'package:ark_app/routes/home.dart';
 import 'package:ark_app/style/design_system.dart';
 import 'package:flutter/material.dart';
 
-class WritePage extends StatelessWidget {
+class CreateArticle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     appBar() {

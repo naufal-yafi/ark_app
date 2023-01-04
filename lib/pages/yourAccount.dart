@@ -1,8 +1,8 @@
 import 'dart:html';
 
-import 'package:ark_app/pages/home.dart';
+import 'package:ark_app/routes/home.dart';
 import 'package:ark_app/pages/login.dart';
-import 'package:ark_app/pages/write.dart';
+import 'package:ark_app/routes/write.dart';
 import 'package:ark_app/style/design_system.dart';
 import 'package:flutter/material.dart';
 

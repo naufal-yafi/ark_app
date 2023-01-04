@@ -1,20 +1,19 @@
+import 'package:ark_app/pages/createArticle.dart';
 import 'package:ark_app/pages/listArticle.dart';
-import 'package:ark_app/pages/write.dart';
 import 'package:ark_app/pages/yourAccount.dart';
-import 'package:ark_app/style/design_system.dart';
 import 'package:flutter/material.dart';
+import 'package:ark_app/style/design_system.dart';
 
-class HomePage extends StatefulWidget {
+class WritePage extends StatefulWidget {
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<WritePage> createState() => _WritePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _WritePageState extends State<WritePage> {
   int currentTab = 0;
-  final List<Widget> screens = [ListArticle(), WritePage(), YourAccountPage()];
 
   final PageStorageBucket bucket = PageStorageBucket();
-  Widget currentScreen = ListArticle();
+  Widget currentScreen = CreateArticle();
 
   @override
   Widget build(BuildContext context) {
@@ -26,16 +25,16 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton.large(
         child: Icon(
           Icons.create,
-          color: currentTab == 1 ? neutral_900 : neutral_50,
+          color: currentTab == 0 ? neutral_900 : neutral_50,
           size: 24,
         ),
         onPressed: () {
           setState(() {
-            currentScreen = WritePage();
             currentTab = 1;
+            currentScreen = CreateArticle();
           });
         },
-        backgroundColor: currentTab == 1 ? neutral_50 : primary,
+        backgroundColor: currentTab == 0 ? neutral_50 : primary,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
@@ -58,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {
                       setState(() {
                         currentScreen = ListArticle();
-                        currentTab = 0;
+                        currentTab = 1;
                       });
                     },
                     child: Column(
@@ -66,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                       children: <Widget>[
                         Icon(
                           Icons.home,
-                          color: currentTab == 0 ? neutral_50 : neutral_200,
+                          color: currentTab == 1 ? neutral_50 : neutral_200,
                           size: 30,
                         ),
                         const SizedBox(
@@ -74,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Text(
                           "Beranda",
-                          style: currentTab == 0
+                          style: currentTab == 1
                               ? label1RegulerShade50
                               : label1RegulerShade200,
                         )

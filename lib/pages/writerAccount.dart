@@ -1,7 +1,4 @@
-import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/read.dart';
-import 'package:ark_app/pages/write.dart';
-import 'package:ark_app/pages/yourAccount.dart';
 import 'package:ark_app/style/design_system.dart';
 import 'package:flutter/material.dart';
 
@@ -341,7 +338,7 @@ class WriterAccountPage extends StatelessWidget {
             ListView(
               children: [
                 Container(
-                  padding: const EdgeInsets.only(bottom: 90),
+                  // padding: const EdgeInsets.only(bottom: 90),
                   child: dashboard(),
                 )
               ],

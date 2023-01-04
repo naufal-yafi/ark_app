@@ -1,5 +1,5 @@
-import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/writerAccount.dart';
+import 'package:ark_app/routes/home.dart';
 import 'package:ark_app/style/design_system.dart';
 import 'package:flutter/material.dart';
 
