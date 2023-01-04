@@ -1,264 +1,129 @@
-import 'package:ark_app/pages/yourAccount.dart';
+import 'package:ark_app/pages/listArticle.dart';
 import 'package:ark_app/pages/write.dart';
-import 'package:ark_app/pages/read.dart';
-import 'package:flutter/material.dart';
+import 'package:ark_app/pages/yourAccount.dart';
 import 'package:ark_app/style/design_system.dart';
+import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int currentTab = 0;
+  final List<Widget> screens = [ListArticle(), WritePage(), YourAccountPage()];
+
+  final PageStorageBucket bucket = PageStorageBucket();
+  Widget currentScreen = ListArticle();
+
   @override
   Widget build(BuildContext context) {
-    artikelCard(String linkImg, String title, String see, String category,
-        String date) {
-      return InkWell(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: ((context) =>
-                      ReadingPage(title, date, category, linkImg))));
+    return Scaffold(
+      body: PageStorage(
+        child: currentScreen,
+        bucket: bucket,
+      ),
+      floatingActionButton: FloatingActionButton.large(
+        child: Icon(
+          Icons.create,
+          color: currentTab == 1 ? neutral_900 : neutral_50,
+          size: 24,
+        ),
+        onPressed: () {
+          setState(() {
+            currentScreen = WritePage();
+            currentTab = 1;
+          });
         },
+        backgroundColor: currentTab == 1 ? neutral_50 : primary,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        shape: const CircularNotchedRectangle(),
+        notchMargin: 18,
         child: Container(
-          padding: const EdgeInsets.fromLTRB(24, 20, 0, 20),
-          decoration:
-              BoxDecoration(border: Border.all(width: 1, color: neutral_800)),
-          child: Row(
-            children: <Widget>[
-              //! Image Card
-              Padding(
-                  padding: const EdgeInsets.only(right: 12),
-                  child: Container(
-                    color: neutral_50,
-                    child: SizedBox(
-                      width: 120,
-                      // height: 150,
-                      child: Image.asset(linkImg),
-                    ),
-                  )),
-              //! Text Group
-              Container(
-                width: MediaQuery.of(context).size.width * 0.60,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    //! Category
-                    Text(
-                      "${category}",
-                      style: label2Reguler,
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    //! TITLE
-                    Text(
-                      "${title}",
-                      maxLines: 3,
-                      overflow: TextOverflow.clip,
-                      style: heading3Bold,
-                    ),
-                    const SizedBox(
-                      height: 9,
-                    ),
-                    Text(
-                      "${see} x dibaca • ${date}",
-                      style: label1Reguler,
-                    )
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-
-    artikelGroup() {
-      return Container(
-        padding: const EdgeInsets.only(top: 114, bottom: 80),
-        child: ListView(
-          children: <Widget>[
-            artikelCard(
-                "images/img1.png",
-                "Elit quis egestas amet arcu. Urna amet augue nam nisl diam.",
-                "20",
-                "UI/UX",
-                "14 Des 2022"),
-            artikelCard(
-                "images/img2.png",
-                "Sit egestas rhoncus vel et sagittis sed.",
-                "50",
-                "UI/UX",
-                "11 Des 2022"),
-            artikelCard(
-                "images/img3.jpg",
-                "Tellus a habitasse enim adipiscing aenean quis.",
-                "14",
-                "Komputer",
-                "11 Des 2022"),
-            artikelCard(
-                "images/img4.jpg",
-                "Praesent pharetra donec amet condimentum ultrices aliquam.",
-                "35",
-                "Sosial",
-                "06 Sep 2022"),
-            artikelCard(
-                "images/img5.jpeg",
-                "Et sed justo venenatis a tellus imperdiet in.",
-                "56",
-                "Kesehatan",
-                "03 Des 2022"),
-            artikelCard(
-                "images/img6.jpeg",
-                "Accumsan amet arcu facilisi in maecenas. Auctor adipiscing.",
-                "13",
-                "Seni",
-                "25 Sep 2022"),
-            artikelCard(
-                "images/img7.jpeg",
-                "Arcu dui iaculis purus et non auctor consectetur.",
-                "54",
-                "Pendidikan",
-                "11 Sep 2022"),
-            artikelCard(
-                "images/img8.jpg",
-                "Massa mi eros est vestibulum vel enim nisi integer.",
-                "51",
-                "Kesehatan",
-                "03 Sep 2022"),
-            artikelCard(
-                "images/img9.jpg",
-                "Risus aliquet convallis volutpat cursus tempor urna vitae.",
-                "45",
-                "Kewarganegaraan",
-                "07 Agt 2022"),
-          ],
-        ),
-      );
-    }
-
-    searchBar() {
-      return Container(
-        padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
-        child: Card(
-          color: neutral_800,
-          child: ListTile(
-            selectedTileColor: neutral_50,
-            leading: Icon(
-              Icons.search,
-              color: neutral_100,
-            ),
-            title: TextField(
-              decoration: InputDecoration(
-                  hintText: "Cari topik kesukaanmu disini...",
-                  hintStyle: TextStyle(
-                    color: neutral_100,
-                  ),
-                  border: InputBorder.none),
-            ),
-            trailing: IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.cancel,
-                color: neutral_100,
-              ),
-            ),
-          ),
-        ),
-      );
-    }
-
-    bottomBar() {
-      return Align(
-        alignment: Alignment.bottomLeft,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          height: 80,
           color: neutral_900,
+          padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * 0.1),
+          height: 80,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              //! HOME
-              InkWell(
-                onTap: () {},
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(
-                      Icons.home,
-                      color: neutral_50,
+              //! BTN BERANDA
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  MaterialButton(
+                    minWidth: 40,
+                    onPressed: () {
+                      setState(() {
+                        currentScreen = ListArticle();
+                        currentTab = 0;
+                      });
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(
+                          Icons.home,
+                          color: currentTab == 0 ? neutral_50 : neutral_200,
+                          size: 30,
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "Beranda",
+                          style: currentTab == 0
+                              ? label1RegulerShade50
+                              : label1RegulerShade200,
+                        )
+                      ],
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "Beranda",
-                      style: label1RegulerShade50,
-                    )
-                  ],
-                ),
-              ),
-              //! HOME
-              //! WRITING
-              InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => WritePage()));
-                },
-                child: Container(
-                  margin: const EdgeInsets.only(bottom: 15),
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                      color: primary,
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(50))),
-                  child: Icon(
-                    Icons.edit,
-                    color: neutral_50,
                   ),
-                ),
+                ],
               ),
-              //! WRITING
-              //! ACCOUNT
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => YourAccountPage()));
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(
-                      Icons.account_circle,
-                      color: neutral_200,
+              //! END BTN BERANDA
+              //! BTN ACCOUNT
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  MaterialButton(
+                    minWidth: 40,
+                    onPressed: () {
+                      setState(() {
+                        currentScreen = YourAccountPage();
+                        currentTab = 2;
+                      });
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(
+                          Icons.account_circle,
+                          color: currentTab == 2 ? neutral_50 : neutral_200,
+                          size: 30,
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "Profile",
+                          style: currentTab == 2
+                              ? label1RegulerShade50
+                              : label1RegulerShade200,
+                        )
+                      ],
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "Saya",
-                      style: label1RegulerShade200,
-                    )
-                  ],
-                ),
-              ),
-              //! ACCOUNT
+                  ),
+                ],
+              )
+              //! END BTN ACCOUNT
             ],
           ),
-        ),
-      );
-    }
-
-    return MaterialApp(
-      title: 'arK | Beranda',
-      home: Scaffold(
-        backgroundColor: neutral_900,
-        body: Stack(
-          children: [artikelGroup(), searchBar(), bottomBar()],
         ),
       ),
-      debugShowCheckedModeBanner: false,
     );
   }
 }

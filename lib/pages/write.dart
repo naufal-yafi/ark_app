@@ -187,95 +187,12 @@ class WritePage extends StatelessWidget {
       );
     }
 
-    bottomBar() {
-      return Align(
-        alignment: Alignment.bottomLeft,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          height: 80,
-          color: neutral_900,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              //! HOME
-              InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(
-                      Icons.home,
-                      color: neutral_200,
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "Beranda",
-                      style: label1RegulerShade200,
-                    )
-                  ],
-                ),
-              ),
-              //! HOME
-              //! WRITING
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  margin: const EdgeInsets.only(bottom: 15),
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                      color: neutral_50,
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(50))),
-                  child: Icon(
-                    Icons.edit,
-                    color: neutral_900,
-                  ),
-                ),
-              ),
-              //! WRITING
-              //! ACCOUNT
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => YourAccountPage()));
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(
-                      Icons.account_circle,
-                      color: neutral_200,
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "Saya",
-                      style: label1RegulerShade200,
-                    )
-                  ],
-                ),
-              ),
-              //! ACCOUNT
-            ],
-          ),
-        ),
-      );
-    }
-
     return MaterialApp(
       title: "arK | Tulis",
       home: Scaffold(
         backgroundColor: neutral_900,
         body: Stack(
-          children: <Widget>[appBar(), createArt(), bottomBar()],
+          children: <Widget>[appBar(), createArt()],
         ),
       ),
       debugShowCheckedModeBanner: false,

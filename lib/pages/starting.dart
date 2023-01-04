@@ -1,7 +1,4 @@
-import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/login.dart';
-import 'package:ark_app/pages/writerAccount.dart';
-import 'package:ark_app/pages/yourAccount.dart';
 import 'package:flutter/material.dart';
 import 'package:ark_app/style/design_system.dart';
 
