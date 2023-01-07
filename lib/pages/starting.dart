@@ -1,7 +1,7 @@
-import 'package:ark_app/pages/home.dart';
-import 'package:ark_app/pages/login.dart';
+import 'home.dart';
+import 'login.dart';
 import 'package:flutter/material.dart';
-import 'package:ark_app/style/design_system.dart';
+import '../style/design_system.dart';
 
 class StartingUp extends StatelessWidget {
   @override
@@ -57,7 +57,7 @@ class StartingUp extends StatelessWidget {
       return Align(
         alignment: Alignment.bottomLeft,
         child: SizedBox(
-          height: 150,
+          height: 125,
           child: Column(
             children: <Widget>[
               //! PRIMARY BUTTON

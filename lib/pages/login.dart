@@ -1,9 +1,9 @@
-import 'package:ark_app/pages/home.dart';
-import 'package:ark_app/pages/signup.dart';
-import 'package:ark_app/pages/starting.dart';
-import 'package:ark_app/pages/write.dart';
+import 'home.dart';
+import 'signup.dart';
+import 'starting.dart';
+import 'write.dart';
 import 'package:flutter/material.dart';
-import 'package:ark_app/style/design_system.dart';
+import '../style/design_system.dart';
 
 class Login extends StatelessWidget {
   String condition = '';
@@ -95,13 +95,13 @@ class Login extends StatelessWidget {
           }
         },
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 20),
+          padding: btnSize,
           decoration: BoxDecoration(
               color: neutral_800, borderRadius: BorderRadius.circular(6)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset('images/googleLogo.png'),
+              Image.asset('assets/images/googleLogo.png'),
               const SizedBox(
                 width: 24,
               ),

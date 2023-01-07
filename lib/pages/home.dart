@@ -1,4 +1,4 @@
-import 'package:ark_app/pages/listArticle.dart';
+import 'listArticle.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {

@@ -1,9 +1,9 @@
-import 'package:ark_app/pages/home.dart';
-import 'package:ark_app/pages/yourAccount.dart';
-import 'package:ark_app/pages/write.dart';
-import 'package:ark_app/pages/read.dart';
+import 'home.dart';
+import 'yourAccount.dart';
+import 'write.dart';
+import 'read.dart';
 import 'package:flutter/material.dart';
-import 'package:ark_app/style/design_system.dart';
+import '../style/design_system.dart';
 
 class ListArticle extends StatelessWidget {
   int tab = 0;
@@ -76,59 +76,59 @@ class ListArticle extends StatelessWidget {
 
     artikelGroup() {
       return Container(
-        padding: const EdgeInsets.only(top: 114, bottom: 80),
+        padding: const EdgeInsets.symmetric(vertical: 90),
         child: ListView(
           children: <Widget>[
             artikelCard(
-                "images/img1.png",
+                "assets/images/img1.png",
                 "Elit quis egestas amet arcu. Urna amet augue nam nisl diam.",
                 "20",
                 "UI/UX",
                 "14 Des 2022"),
             artikelCard(
-                "images/img2.png",
+                "assets/images/img2.png",
                 "Sit egestas rhoncus vel et sagittis sed.",
                 "50",
                 "UI/UX",
                 "11 Des 2022"),
             artikelCard(
-                "images/img3.jpg",
+                "assets/images/img3.jpg",
                 "Tellus a habitasse enim adipiscing aenean quis.",
                 "14",
                 "Komputer",
                 "11 Des 2022"),
             artikelCard(
-                "images/img4.jpg",
+                "assets/images/img4.jpg",
                 "Praesent pharetra donec amet condimentum ultrices aliquam.",
                 "35",
                 "Sosial",
                 "06 Sep 2022"),
             artikelCard(
-                "images/img5.jpeg",
+                "assets/images/img5.jpeg",
                 "Et sed justo venenatis a tellus imperdiet in.",
                 "56",
                 "Kesehatan",
                 "03 Des 2022"),
             artikelCard(
-                "images/img6.jpeg",
+                "assets/images/img6.jpeg",
                 "Accumsan amet arcu facilisi in maecenas. Auctor adipiscing.",
                 "13",
                 "Seni",
                 "25 Sep 2022"),
             artikelCard(
-                "images/img7.jpeg",
+                "assets/images/img7.jpeg",
                 "Arcu dui iaculis purus et non auctor consectetur.",
                 "54",
                 "Pendidikan",
                 "11 Sep 2022"),
             artikelCard(
-                "images/img8.jpg",
+                "assets/images/img8.jpg",
                 "Massa mi eros est vestibulum vel enim nisi integer.",
                 "51",
                 "Kesehatan",
                 "03 Sep 2022"),
             artikelCard(
-                "images/img9.jpg",
+                "assets/images/img9.jpg",
                 "Risus aliquet convallis volutpat cursus tempor urna vitae.",
                 "45",
                 "Kewarganegaraan",
@@ -140,7 +140,7 @@ class ListArticle extends StatelessWidget {
 
     searchBar() {
       return Container(
-        padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         child: Card(
           color: neutral_800,
           child: ListTile(

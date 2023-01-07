@@ -1,4 +1,4 @@
-import 'package:ark_app/pages/starting.dart';
+import 'pages/starting.dart';
 import 'package:flutter/material.dart';
 
 void main() {

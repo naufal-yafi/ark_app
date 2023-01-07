@@ -1,6 +1,6 @@
-import 'package:ark_app/pages/home.dart';
-import 'package:ark_app/pages/yourAccount.dart';
-import 'package:ark_app/style/design_system.dart';
+import 'home.dart';
+import 'yourAccount.dart';
+import '../style/design_system.dart';
 import 'package:flutter/material.dart';
 
 class WritePage extends StatelessWidget {

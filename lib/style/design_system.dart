@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-EdgeInsets btnSize = const EdgeInsets.symmetric(vertical: 24);
-EdgeInsets textFieldSize = const EdgeInsets.fromLTRB(20, 10, 10, 10);
+EdgeInsets btnSize = const EdgeInsets.symmetric(vertical: 20);
+EdgeInsets textFieldSize = const EdgeInsets.fromLTRB(15, 5, 5, 5);
 
 //! Color Scheme
 Color neutral_900 = const Color(0xff252525);
@@ -78,6 +78,11 @@ TextStyle body3Reguler = TextStyle(
     fontSize: 12,
     fontFamily: 'FiraSans-Reguler',
     color: neutral_50,
+    letterSpacing: .7);
+TextStyle body3RegulerShade900 = TextStyle(
+    fontSize: 12,
+    fontFamily: 'FiraSans-Bold',
+    color: neutral_900,
     letterSpacing: .7);
 //? END Body
 

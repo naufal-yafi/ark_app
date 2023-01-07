@@ -1,7 +1,7 @@
-import 'package:ark_app/pages/home.dart';
-import 'package:ark_app/pages/login.dart';
-import 'package:ark_app/pages/write.dart';
-import 'package:ark_app/style/design_system.dart';
+import 'home.dart';
+import 'login.dart';
+import 'write.dart';
+import '../style/design_system.dart';
 import 'package:flutter/material.dart';
 
 class YourAccountPage extends StatelessWidget {
@@ -17,7 +17,7 @@ class YourAccountPage extends StatelessWidget {
             margin: const EdgeInsets.only(top: 40),
             width: MediaQuery.of(context).size.width,
             child: Image.asset(
-              "images/char06.png",
+              "assets/images/char06.png",
               height: 100,
             ),
           ),
@@ -125,11 +125,11 @@ class YourAccountPage extends StatelessWidget {
                   ),
                   label: Text(
                     "Beri Apresiasi",
-                    style: body2BoldShade900,
+                    style: body3RegulerShade900,
                   ),
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 15, horizontal: 15),
+                          vertical: 20, horizontal: 15),
                       backgroundColor: neutral_300),
                 )
               ],
@@ -235,7 +235,7 @@ class YourAccountPage extends StatelessWidget {
           Text(
             "Belum menulis apapun...",
             style: label1Reguler,
-          )
+          ),
           //! ENDLIST ARTICLE HAS WRITE
         ],
       );
@@ -362,11 +362,13 @@ class YourAccountPage extends StatelessWidget {
         ),
         body: Stack(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: ListView(
-                children: <Widget>[dashboard()],
-              ),
+            ListView(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(24, 0, 24, 120),
+                  child: dashboard(),
+                )
+              ],
             ),
             bottomBar(),
             btnWriting()
