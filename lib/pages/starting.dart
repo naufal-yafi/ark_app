@@ -1,3 +1,4 @@
+import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:ark_app/style/design_system.dart';
@@ -62,18 +63,22 @@ class StartingUp extends StatelessWidget {
               //! PRIMARY BUTTON
               SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: 60,
                 child: ElevatedButton.icon(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Login("baca")));
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) => Login("baca")));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()));
                   },
                   icon: const Icon(Icons.menu_book),
                   label: Text(
                     "Baca Artikel",
                     style: body1Reguler,
                   ),
-                  style: ElevatedButton.styleFrom(backgroundColor: primary),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: primary, padding: btnSize),
                 ),
               ),
               //! PRIMARY BUTTON
@@ -83,7 +88,6 @@ class StartingUp extends StatelessWidget {
               //! SECONDARY BUTTON
               SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: 60,
                 child: OutlinedButton.icon(
                   onPressed: () {
                     Navigator.push(
@@ -98,7 +102,8 @@ class StartingUp extends StatelessWidget {
                   ),
                   style: OutlinedButton.styleFrom(
                       foregroundColor: neutral_50,
-                      side: BorderSide(color: neutral_50)),
+                      side: BorderSide(color: neutral_50),
+                      padding: btnSize),
                 ),
               )
               //! SECONDARY BUTTON

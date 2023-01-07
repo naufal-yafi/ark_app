@@ -4,6 +4,7 @@ import 'package:ark_app/style/design_system.dart';
 import 'package:flutter/material.dart';
 
 class WritePage extends StatelessWidget {
+  int tab = 1;
   @override
   Widget build(BuildContext context) {
     appBar() {
@@ -76,7 +77,7 @@ class WritePage extends StatelessWidget {
                 style: TextStyle(color: neutral_50),
                 cursorColor: neutral_50,
                 minLines: 15,
-                maxLines: 1000,
+                maxLines: null,
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
@@ -191,53 +192,40 @@ class WritePage extends StatelessWidget {
       return Align(
         alignment: Alignment.bottomLeft,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 50),
           height: 80,
           color: neutral_900,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               //! HOME
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomePage()));
                 },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Icon(
                       Icons.home,
-                      color: neutral_200,
+                      color: tab == 0 ? neutral_50 : neutral_200,
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
                       "Beranda",
-                      style: label1RegulerShade200,
+                      style: tab == 0
+                          ? label1RegulerShade50
+                          : label1RegulerShade200,
                     )
                   ],
                 ),
               ),
               //! HOME
-              //! WRITING
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  margin: const EdgeInsets.only(bottom: 15),
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                      color: neutral_50,
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(50))),
-                  child: Icon(
-                    Icons.edit,
-                    color: neutral_900,
-                  ),
-                ),
-              ),
-              //! WRITING
               //! ACCOUNT
               InkWell(
                 onTap: () {
@@ -251,14 +239,16 @@ class WritePage extends StatelessWidget {
                   children: <Widget>[
                     Icon(
                       Icons.account_circle,
-                      color: neutral_200,
+                      color: tab == 2 ? neutral_50 : neutral_200,
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
                       "Saya",
-                      style: label1RegulerShade200,
+                      style: tab == 2
+                          ? label1RegulerShade50
+                          : label1RegulerShade200,
                     )
                   ],
                 ),
@@ -270,12 +260,38 @@ class WritePage extends StatelessWidget {
       );
     }
 
+    btnWriting() {
+      return Align(
+        alignment: Alignment.bottomCenter,
+        child:
+            //! WRITING
+            InkWell(
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => WritePage()));
+          },
+          child: Container(
+            margin: const EdgeInsets.only(bottom: 30),
+            padding: const EdgeInsets.all(25),
+            decoration: BoxDecoration(
+                color: tab == 1 ? neutral_50 : primary,
+                borderRadius: const BorderRadius.all(Radius.circular(50))),
+            child: Icon(
+              Icons.edit,
+              color: tab == 1 ? neutral_900 : neutral_50,
+            ),
+          ),
+        ),
+        //! WRITING,
+      );
+    }
+
     return MaterialApp(
       title: "arK | Tulis",
       home: Scaffold(
         backgroundColor: neutral_900,
         body: Stack(
-          children: <Widget>[appBar(), createArt(), bottomBar()],
+          children: <Widget>[appBar(), createArt(), bottomBar(), btnWriting()],
         ),
       ),
       debugShowCheckedModeBanner: false,

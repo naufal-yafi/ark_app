@@ -1,3 +1,4 @@
+import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/yourAccount.dart';
 import 'package:ark_app/pages/write.dart';
 import 'package:ark_app/pages/read.dart';
@@ -5,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:ark_app/style/design_system.dart';
 
 class ListArticle extends StatelessWidget {
+  int tab = 0;
   @override
   Widget build(BuildContext context) {
     artikelCard(String linkImg, String title, String see, String category,
@@ -171,53 +173,40 @@ class ListArticle extends StatelessWidget {
       return Align(
         alignment: Alignment.bottomLeft,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 50),
           height: 80,
           color: neutral_900,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               //! HOME
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomePage()));
+                },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Icon(
                       Icons.home,
-                      color: neutral_50,
+                      color: tab == 0 ? neutral_50 : neutral_200,
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
                       "Beranda",
-                      style: label1RegulerShade50,
+                      style: tab == 0
+                          ? label1RegulerShade50
+                          : label1RegulerShade200,
                     )
                   ],
                 ),
               ),
               //! HOME
-              //! WRITING
-              InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => WritePage()));
-                },
-                child: Container(
-                  margin: const EdgeInsets.only(bottom: 15),
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                      color: primary,
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(50))),
-                  child: Icon(
-                    Icons.edit,
-                    color: neutral_50,
-                  ),
-                ),
-              ),
-              //! WRITING
               //! ACCOUNT
               InkWell(
                 onTap: () {
@@ -231,14 +220,16 @@ class ListArticle extends StatelessWidget {
                   children: <Widget>[
                     Icon(
                       Icons.account_circle,
-                      color: neutral_200,
+                      color: tab == 2 ? neutral_50 : neutral_200,
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
                       "Saya",
-                      style: label1RegulerShade200,
+                      style: tab == 2
+                          ? label1RegulerShade50
+                          : label1RegulerShade200,
                     )
                   ],
                 ),
@@ -250,12 +241,38 @@ class ListArticle extends StatelessWidget {
       );
     }
 
+    btnWriting() {
+      return Align(
+        alignment: Alignment.bottomCenter,
+        child:
+            //! WRITING
+            InkWell(
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => WritePage()));
+          },
+          child: Container(
+            margin: const EdgeInsets.only(bottom: 30),
+            padding: const EdgeInsets.all(25),
+            decoration: BoxDecoration(
+                color: tab == 1 ? neutral_50 : primary,
+                borderRadius: const BorderRadius.all(Radius.circular(50))),
+            child: Icon(
+              Icons.edit,
+              color: tab == 1 ? neutral_900 : neutral_50,
+            ),
+          ),
+        ),
+        //! WRITING,
+      );
+    }
+
     return MaterialApp(
       title: 'arK | Beranda',
       home: Scaffold(
         backgroundColor: neutral_900,
         body: Stack(
-          children: [artikelGroup(), searchBar(), bottomBar()],
+          children: [artikelGroup(), searchBar(), bottomBar(), btnWriting()],
         ),
       ),
       debugShowCheckedModeBanner: false,

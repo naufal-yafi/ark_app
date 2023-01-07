@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+EdgeInsets btnSize = const EdgeInsets.symmetric(vertical: 24);
+
 //! Color Scheme
 Color neutral_900 = const Color(0xff252525);
 Color neutral_800 = const Color(0xff313131);

@@ -70,20 +70,18 @@ class _ReadingPageState extends State<ReadingPage> {
   }
 
   btnBack() {
-    return SizedBox(
-      height: 50,
-      child: ElevatedButton.icon(
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => HomePage()));
-        },
-        icon: const Icon(Icons.subdirectory_arrow_left),
-        label: Text(
-          "Baca Artikel Lainnya",
-          style: body1Reguler,
-        ),
-        style: ElevatedButton.styleFrom(backgroundColor: primary),
+    return ElevatedButton.icon(
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomePage()));
+      },
+      icon: const Icon(Icons.subdirectory_arrow_left),
+      label: Text(
+        "Baca Artikel Lainnya",
+        style: body1Reguler,
       ),
+      style:
+          ElevatedButton.styleFrom(backgroundColor: primary, padding: btnSize),
     );
   }
 
