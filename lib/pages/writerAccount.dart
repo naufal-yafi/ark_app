@@ -370,7 +370,7 @@ class WriterAccountPage extends StatelessWidget {
                       height: 8,
                     ),
                     Text(
-                      "Saya",
+                      "Profil",
                       style: tab == 2
                           ? label1RegulerShade50
                           : label1RegulerShade200,
@@ -412,7 +412,7 @@ class WriterAccountPage extends StatelessWidget {
     }
 
     return MaterialApp(
-      title: 'arK | Artikel Kulo',
+      title: 'arK | Penulis',
       home: Scaffold(
         backgroundColor: neutral_900,
         appBar: AppBar(

@@ -41,13 +41,14 @@ class WritePage extends StatelessWidget {
                 height: 40,
                 child: ElevatedButton.icon(
                   onPressed: () {},
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.upload,
                     size: 14,
+                    color: neutral_50,
                   ),
-                  label: const Text(
+                  label: Text(
                     "Unggah",
-                    style: TextStyle(fontSize: 14),
+                    style: body2RegulerShade50,
                   ),
                   style: ElevatedButton.styleFrom(backgroundColor: primary),
                 ),
@@ -76,11 +77,10 @@ class WritePage extends StatelessWidget {
               child: TextField(
                 style: TextStyle(color: neutral_50),
                 cursorColor: neutral_50,
-                minLines: 15,
+                minLines: 8,
                 maxLines: null,
                 decoration: InputDecoration(
-                  contentPadding:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                  contentPadding: const EdgeInsets.all(20),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: primary)),
                   border: InputBorder.none,
@@ -104,7 +104,7 @@ class WritePage extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.only(top: 8),
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                   border: Border.all(color: neutral_800),
                   borderRadius: const BorderRadius.all(Radius.circular(5))),
@@ -155,8 +155,7 @@ class WritePage extends StatelessWidget {
                 style: TextStyle(color: neutral_50),
                 cursorColor: neutral_50,
                 decoration: InputDecoration(
-                  contentPadding:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                  contentPadding: textFieldSize,
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: primary)),
                   border: InputBorder.none,

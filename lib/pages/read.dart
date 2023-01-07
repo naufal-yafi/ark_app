@@ -75,10 +75,13 @@ class _ReadingPageState extends State<ReadingPage> {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => HomePage()));
       },
-      icon: const Icon(Icons.subdirectory_arrow_left),
+      icon: const Icon(
+        Icons.subdirectory_arrow_left,
+        size: 14,
+      ),
       label: Text(
         "Baca Artikel Lainnya",
-        style: body1Reguler,
+        style: body2RegulerShade50,
       ),
       style:
           ElevatedButton.styleFrom(backgroundColor: primary, padding: btnSize),
@@ -88,7 +91,7 @@ class _ReadingPageState extends State<ReadingPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'read  ${title}',
+      title: 'arK | Baca',
       home: Scaffold(
           body: Stack(
         children: [

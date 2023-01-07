@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 EdgeInsets btnSize = const EdgeInsets.symmetric(vertical: 24);
+EdgeInsets textFieldSize = const EdgeInsets.fromLTRB(20, 10, 10, 10);
 
 //! Color Scheme
 Color neutral_900 = const Color(0xff252525);

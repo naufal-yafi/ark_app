@@ -150,6 +150,8 @@ class ListArticle extends StatelessWidget {
               color: neutral_100,
             ),
             title: TextField(
+              style: body2RegulerShade50,
+              cursorColor: neutral_50,
               decoration: InputDecoration(
                   hintText: "Cari topik kesukaanmu disini...",
                   hintStyle: TextStyle(
@@ -226,7 +228,7 @@ class ListArticle extends StatelessWidget {
                       height: 8,
                     ),
                     Text(
-                      "Saya",
+                      "Profil",
                       style: tab == 2
                           ? label1RegulerShade50
                           : label1RegulerShade200,

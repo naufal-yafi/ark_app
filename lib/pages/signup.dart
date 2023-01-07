@@ -48,13 +48,12 @@ class Signup extends StatelessWidget {
                   color: neutral_800,
                   borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: TextField(
-                style: TextStyle(color: neutral_50),
+                style: body2BoldShade50,
                 cursorColor: neutral_50,
                 obscureText: stylePassword,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                    contentPadding: const EdgeInsets.symmetric(
-                        vertical: 20, horizontal: 20),
+                    contentPadding: textFieldSize,
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: primary)),
                     border: InputBorder.none,
@@ -81,12 +80,11 @@ class Signup extends StatelessWidget {
                   color: neutral_800,
                   borderRadius: const BorderRadius.all(Radius.circular(5))),
               child: TextField(
-                style: TextStyle(color: neutral_50),
+                style: body2BoldShade50,
                 cursorColor: neutral_50,
                 obscureText: stylePassword,
                 decoration: InputDecoration(
-                    contentPadding: const EdgeInsets.symmetric(
-                        vertical: 20, horizontal: 20),
+                    contentPadding: textFieldSize,
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: primary)),
                     border: InputBorder.none,
@@ -100,24 +98,22 @@ class Signup extends StatelessWidget {
     }
 
     btnLogin() {
-      return SizedBox(
-        height: 52,
-        child: ElevatedButton(
-          onPressed: () {
-            if (condition == 'baca') {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => HomePage()));
-            } else {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => WritePage()));
-            }
-          },
-          child: Text(
-            'Daftar',
-            style: body1Reguler,
-          ),
-          style: ElevatedButton.styleFrom(backgroundColor: primary),
+      return ElevatedButton(
+        onPressed: () {
+          if (condition == 'baca') {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => HomePage()));
+          } else {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => WritePage()));
+          }
+        },
+        child: Text(
+          'Daftar',
+          style: body2RegulerShade50,
         ),
+        style: ElevatedButton.styleFrom(
+            backgroundColor: primary, padding: btnSize),
       );
     }
 

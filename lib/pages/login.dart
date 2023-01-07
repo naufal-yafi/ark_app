@@ -51,8 +51,7 @@ class Login extends StatelessWidget {
               cursorColor: neutral_50,
               obscureText: stylePassword,
               decoration: InputDecoration(
-                  contentPadding:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                  contentPadding: textFieldSize,
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: primary)),
                   border: InputBorder.none,
@@ -65,24 +64,22 @@ class Login extends StatelessWidget {
     }
 
     btnLogin() {
-      return SizedBox(
-        height: 52,
-        child: ElevatedButton(
-          onPressed: () {
-            if (condition == 'baca') {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => HomePage()));
-            } else {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => WritePage()));
-            }
-          },
-          child: Text(
-            'Masuk',
-            style: body1Reguler,
-          ),
-          style: ElevatedButton.styleFrom(backgroundColor: primary),
+      return ElevatedButton(
+        onPressed: () {
+          if (condition == 'baca') {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => HomePage()));
+          } else {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => WritePage()));
+          }
+        },
+        child: Text(
+          'Masuk',
+          style: body2RegulerShade50,
         ),
+        style: ElevatedButton.styleFrom(
+            backgroundColor: primary, padding: btnSize),
       );
     }
 

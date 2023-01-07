@@ -65,17 +65,16 @@ class StartingUp extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 child: ElevatedButton.icon(
                   onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => Login("baca")));
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HomePage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login("baca")));
                   },
-                  icon: const Icon(Icons.menu_book),
+                  icon: const Icon(
+                    Icons.menu_book,
+                    size: 18,
+                  ),
                   label: Text(
                     "Baca Artikel",
-                    style: body1Reguler,
+                    style: body2RegulerShade50,
                   ),
                   style: ElevatedButton.styleFrom(
                       backgroundColor: primary, padding: btnSize),
@@ -95,10 +94,13 @@ class StartingUp extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => Login("tulis")));
                   },
-                  icon: const Icon(Icons.create),
+                  icon: Icon(
+                    Icons.create,
+                    size: 18,
+                  ),
                   label: Text(
                     "Tulis Artikelmu",
-                    style: body1Reguler,
+                    style: body2RegulerShade50,
                   ),
                   style: OutlinedButton.styleFrom(
                       foregroundColor: neutral_50,

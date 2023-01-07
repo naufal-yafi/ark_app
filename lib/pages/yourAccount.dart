@@ -40,7 +40,6 @@ class YourAccountPage extends StatelessWidget {
             children: <Widget>[
               //! SECONDARY BUTTON
               SizedBox(
-                height: 50,
                 width: MediaQuery.of(context).size.width * 0.42,
                 child: OutlinedButton(
                   onPressed: () {},
@@ -50,13 +49,13 @@ class YourAccountPage extends StatelessWidget {
                   ),
                   style: OutlinedButton.styleFrom(
                       foregroundColor: neutral_50,
-                      side: BorderSide(color: neutral_50)),
+                      side: BorderSide(color: neutral_50),
+                      padding: btnSize),
                 ),
               ),
               //! SECONDARY BUTTON
               //! PRIMARY BUTTON
               SizedBox(
-                height: 50,
                 width: MediaQuery.of(context).size.width * 0.42,
                 child: ElevatedButton(
                   onPressed: () {
@@ -82,8 +81,7 @@ class YourAccountPage extends StatelessWidget {
                     ],
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: primary,
-                  ),
+                      backgroundColor: primary, padding: btnSize),
                 ),
               ),
               //! PRIMARY BUTTON
@@ -300,7 +298,7 @@ class YourAccountPage extends StatelessWidget {
                       height: 8,
                     ),
                     Text(
-                      "Saya",
+                      "Profil",
                       style: tab == 2
                           ? label1RegulerShade50
                           : label1RegulerShade200,
@@ -342,7 +340,7 @@ class YourAccountPage extends StatelessWidget {
     }
 
     return MaterialApp(
-      title: 'arK | Artikel Kulo',
+      title: 'arK | Profil',
       home: Scaffold(
         backgroundColor: neutral_900,
         appBar: AppBar(
