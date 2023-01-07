@@ -1,7 +1,7 @@
-import 'package:ark_app/routes/home.dart';
+import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/signup.dart';
 import 'package:ark_app/pages/starting.dart';
-import 'package:ark_app/routes/write.dart';
+import 'package:ark_app/pages/write.dart';
 import 'package:flutter/material.dart';
 import 'package:ark_app/style/design_system.dart';
 

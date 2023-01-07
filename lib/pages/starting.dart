@@ -31,6 +31,7 @@ class StartingUp extends StatelessWidget {
               height: 28,
             ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
                   "Baca apapun disini, mulai dari topik desain, cerita pengalaman, dan topik - topik seru lainnya yang akan membuatmu betah untuk membaca, juga tentunya akan menambah wawasan kamu.",

@@ -1,8 +1,6 @@
-import 'dart:html';
-
-import 'package:ark_app/routes/home.dart';
+import 'package:ark_app/pages/home.dart';
 import 'package:ark_app/pages/login.dart';
-import 'package:ark_app/routes/write.dart';
+import 'package:ark_app/pages/write.dart';
 import 'package:ark_app/style/design_system.dart';
 import 'package:flutter/material.dart';
 
@@ -244,6 +242,86 @@ class YourAccountPage extends StatelessWidget {
       );
     }
 
+    bottomBar() {
+      return Align(
+        alignment: Alignment.bottomLeft,
+        child: Container(
+          height: 80,
+          color: neutral_900,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              //! HOME
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(
+                      Icons.home,
+                      color: neutral_200,
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Beranda",
+                      style: label1RegulerShade200,
+                    )
+                  ],
+                ),
+              ),
+              //! HOME
+              //! WRITING
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => WritePage()));
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 15),
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                      color: primary,
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(50))),
+                  child: Icon(
+                    Icons.edit,
+                    color: neutral_50,
+                  ),
+                ),
+              ),
+              //! WRITING
+              //! ACCOUNT
+              InkWell(
+                onTap: () {},
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(
+                      Icons.account_circle,
+                      color: neutral_50,
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Saya",
+                      style: label1RegulerShade50,
+                    )
+                  ],
+                ),
+              ),
+              //! ACCOUNT
+            ],
+          ),
+        ),
+      );
+    }
+
     return MaterialApp(
       title: 'arK | Artikel Kulo',
       home: Scaffold(
@@ -268,7 +346,7 @@ class YourAccountPage extends StatelessWidget {
         body: Container(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Stack(
-            children: <Widget>[dashboard()],
+            children: <Widget>[dashboard(), bottomBar()],
           ),
         ),
       ),
