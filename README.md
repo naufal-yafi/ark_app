@@ -15,6 +15,12 @@
 This project is the final project of the learning subject Mobile 1, where the material is still focused on the appearance of the mobile application only. So, <strong>this application cannot store data or retrieve data.</strong> Because the displayed data is static data from the source code.
 </p>
 
+<h4>How I Build To APK</h4>
+
+```sh
+flutter build apk --build-name=1.0 --build-number=1
+```
+
 <h4>App Features:</h4>
 <ul>
     <li><strong>Read Articles</strong>
